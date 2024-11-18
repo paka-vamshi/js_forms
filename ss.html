@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passaword matched</title>
+</head>
+<style>
+  #matched,#notmatched {
+    display: none;
+
+  } 
+  
+</style>
+<body>
+  <input type ="password" id ="vk1" placeholder="enter password" value="krishna"><br>
+  <input type ="password" id ="vk2" placeholder="enter password" value="vamshi"><br>
+  <div id ="matched" style="color: green;">password matched</div>
+  <div id ="notmatched" style="color: red;">password notmatched</div>
+  <button id ="button1">submit</button>
+  <script>
+       var vka = document.getElementById("vk1");
+      var vkb = document.getElementById("vk2");
+      var btn = document.getElementById("button1");
+      var divmtch = document.getElementById("matched");
+      var divunmtch = document.getElementById("notmatched");
+      btn.addEventListener("click",function(){
+        if(vk1.value == vk2.value){
+        
+        divmtch.style.display="block";
+        divunmtch.style.display="none";
+
+        }
+      else{
+        divunmtch.style.display="block";
+        divmtch.style.display="none";
+      }
+      console.log(vk1.value);
+      console.log(vk2.value);
+      
+    })
+
+
+  </script>
+
+</body>
+</html>
